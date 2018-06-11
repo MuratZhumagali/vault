@@ -1,0 +1,23 @@
+{
+    "snapshot_agent": {
+      "http_addr": "127.0.0.1:8500",
+      "token": "",
+      "datacenter": "",
+      "log": {
+        "level": "INFO",
+        "enable_syslog": false,
+        "syslog_facility": "LOCAL0"
+      },
+      "snapshot": {
+        "interval": "1h",
+        "retain": 3,
+        "stale": false,
+        "deregister_after": "72h",
+        "lock_key": "consul-snapshot/lock",
+        "max_failures": 3
+      },
+      "local_storage": {
+        "path": "/object_storage/consul_backup/"
+      }
+    }
+}
